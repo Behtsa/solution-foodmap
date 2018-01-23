@@ -1,0 +1,20 @@
+/* Nav bar */
+div.nav-wrapper {
+  background-color: black;
+}
+
+/* Mapa */
+#map {
+    margin-top: 4%;
+    height: 400px;
+}
+
+/* input search */
+.input-field input[type=search]#search {
+  padding-left: 2rem;
+}
+
+/* Tarjeta de los restaurantes */
+.restaurante {
+    cursor: pointer;
+}

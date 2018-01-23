@@ -1,0 +1,52 @@
+/* -------------- INDEX ---------------- */
+.index-bg {
+  background-image: url('../assets/img/toasted.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.vh-total {
+  height: 100vh;
+}
+
+/* -------------- VIEW 2 ---------------- */
+/* Nav bar */
+div.nav-wrapper {
+  background-color: black;
+}
+
+img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+/* Mapa */
+#map {
+    margin-top: 4%;
+    height: 400px;
+}
+
+/* input search */
+.input-field input[type=search]#search {
+  padding-left: 2rem;
+}
+
+/* Tarjeta de los restaurantes */
+.restaurante {
+    cursor: pointer;
+}
+
+
+/* -------------- Helpers ---------------- */
+.mt-20{
+  margin-top: 20vh;
+}
+
+.mt-12 {
+  margin-top: 12%;
+}
+
+.mb-5 {
+  margin-bottom: 5%;
+}
