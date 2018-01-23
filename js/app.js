@@ -76,6 +76,8 @@ function loadPage() {
       }, 500);
     showRestaurants(restaurants);
     $("#search").keyup(filterRestaurants);
+    $(".modal").modal();
+
 }
 
 // Pinta en el HTML la plantilla con la info de los restaurantes
@@ -104,6 +106,7 @@ function showRestaurants (array) {
 		$link.attr("data-address", restaurant.address);
 		$link.addClass("cambiarMapa");
 		$link.addClass("modal-trigger");
+		$link.text("Ver detalle");
 
 		$divCardAction.append($link);
 		$divCardStacked.append($divCardAction);
@@ -162,13 +165,18 @@ function filterRestaurants () {
 		var filteredRestaurant = restaurants.filter(function(item) { /* filter devuelve un arreglo*/
 		return item.name.toLowerCase().indexOf(searchedRestaurants) >= 0;
 	})
-	showRestaurants (item);
+	showRestaurants (filteredRestaurant);
+}else {
+	$("#restaurants-list").empty();
+	showRestaurants(restaurants);
+
 }
 };
 // Pintar modal con detalles de cada restaurant
-var paintModal = function() {
-
+function paintModal() {
+	var name = $(this).data('name');
+	$("#name").text(name);
 }
 
-
+$(document).on("click", ".modales", paintModal);
 $(document).ready(loadPage);
